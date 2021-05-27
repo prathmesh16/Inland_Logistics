@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/main_loc_item"
+    android:background="@color/white">
+
+    <TextView
+        android:clickable="true"
+        android:background="@color/white"
+        android:id="@+id/locationTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="24dp"
+        android:fontFamily="@font/nunito_semibold"
+        android:gravity="left"
+        android:text="vikas"
+        android:textColor="@color/heading"
+        android:textSize="16dp"
+        android:layout_centerVertical="true"
+        />
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="28dp"
+        android:background="#EAE6E6"
+        android:layout_alignParentBottom="true"
+
+        />
+
+    <ImageView
+        android:id="@+id/selected_icon"
+        android:layout_width="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/checked_icon"
+        android:visibility="invisible"
+        android:tint="#41A646"
+
+        />
+
+</RelativeLayout>

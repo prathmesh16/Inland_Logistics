@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/faint">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/topbox_ui"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/bkbtndocketReport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="@+id/header_emp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/header_emp"
+            app:srcCompat="@drawable/back_ios_icon" />
+
+        <TextView
+            android:id="@+id/header_emp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/nunito_bold"
+            android:text="Docket Report"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/topbar"
+        android:id="@+id/date_layout"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+       <LinearLayout
+           android:gravity="center"
+           android:layout_weight="1"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal" >
+
+           <TextView
+               android:layout_gravity="center"
+               android:gravity="center"
+               android:text="From - "
+               android:fontFamily="@font/nunito_semibold"
+               android:textColor="@color/heading"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"/>
+
+           <TextView
+               android:layout_gravity="center"
+               android:gravity="center"
+               android:id="@+id/startdate"
+               android:text="01/08/2020"
+               android:fontFamily="@font/nunito_semibold"
+               android:textColor="@color/black"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"/>
+
+           <ImageView
+               android:id="@+id/startDateSelector"
+               android:layout_marginStart="8dp"
+               android:layout_gravity="center"
+               android:layout_width="wrap_content"
+               android:layout_height="22dp"
+               android:src="@drawable/calender_icon"
+               android:tint="#368ED1"
+               />
+
+
+       </LinearLayout>
+
+        <TextView
+            android:layout_width="0.8dp"
+            android:layout_height="match_parent"
+            android:background="#989696"
+            />
+        <LinearLayout
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="To - "
+                android:fontFamily="@font/nunito_semibold"
+                android:textColor="@color/heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/endDate"
+                android:text="25/08/2020"
+                android:fontFamily="@font/nunito_semibold"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/endDateSelector"
+                android:layout_marginStart="8dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:src="@drawable/calender_icon"
+                android:tint="#368ED1"
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:background="#FAFAFA"
+        android:id="@+id/rvDocketReport"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date_layout" />
+
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:id="@+id/xls_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="40dp"
+        android:elevation="20dp"
+        android:src="@drawable/xls_icon"
+        />
+
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/colorPrimary"
+        android:id="@+id/progressbar"
+        app:layout_constraintStart_toStartOf="@+id/rvDocketReport"
+        app:layout_constraintBottom_toBottomOf="@+id/rvDocketReport"
+        app:layout_constraintEnd_toEndOf="@+id/rvDocketReport"
+        app:layout_constraintTop_toTopOf="@id/rvDocketReport"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

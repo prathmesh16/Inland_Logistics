@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFFFFFF">
+
+    <!--    top layout-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/topbox_ui"
+        app:layout_constraintBottom_toBottomOf="@id/guideline101"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/profile_drawer_toggle"
+            android:layout_width="28dp"
+            android:layout_height="30dp"
+            android:elevation="2dp"
+            android:layout_marginStart="16dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/menu"
+            android:tint="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="26dp"/>
+
+
+        <TextView
+            android:id="@+id/profile_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="26dp"
+            android:fontFamily="@font/nunito_bold"
+            android:text="PROFILE"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="@id/top_layout2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/top_layout2"
+            app:layout_constraintTop_toTopOf="@id/top_layout2" />
+
+
+        <ImageView
+            android:id="@+id/logout_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/logout_icon"
+            android:tint="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/top_layout2"
+            app:layout_constraintTop_toTopOf="@+id/top_layout2" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline201"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="0dp"
+            app:layout_constraintGuide_percent="0.75" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="4dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/guideline201"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_label">
+
+            <TextView
+                android:id="@+id/profile_text"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/profile_bg"
+                android:fontFamily="@font/nunito_bold"
+                android:gravity="center"
+                android:maxLength="1"
+                android:text="V"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="24dp" />
+
+            <TextView
+                android:id="@+id/profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/nunito_semibold"
+                android:text="Aditya"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="4dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/profile_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="invisible"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="test@gmail.com"
+                    android:textColor="#F3EDED"
+                    android:textSize="15dp"
+
+                    />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/update_email_btn"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/edit_icon"
+                    android:tint="#F3EDED" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/main_details_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/white"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline102">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="12dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:text="User ID"
+                    android:textColor="#000"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/profile_userid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:paddingBottom="1dp"
+                    android:text="123"
+                    android:textColor="@color/heading"
+                    android:textSize="15dp" />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="#CDCCCC" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingRight="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:text="Mobile No."
+                        android:textColor="#000"
+                        android:textSize="16dp" />
+
+
+                    <TextView
+                        android:id="@+id/update_mobile_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="right"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:gravity="right"
+                        android:text="Update"
+                        android:textColor="@color/sky"
+                        android:textSize="15dp" />
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/mobile_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:paddingBottom="1dp"
+                    android:text="+919767865484"
+                    android:textColor="@color/heading"
+                    android:textSize="14dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="#CDCCCC" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingRight="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:text="Address"
+                        android:textColor="#000"
+                        android:textSize="16dp" />
+
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/update_address_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="right"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:gravity="right"
+                        android:text="Update"
+                        android:textColor="@color/sky"
+                        android:textSize="15dp" />
+                    <!--                8893D3-->
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:paddingBottom="1dp"
+                    android:textColor="@color/heading"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:id="@+id/change_pass_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/login_btn_bg"
+        android:elevation="8dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Change Password"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="@id/main_details_card"
+        app:layout_constraintStart_toStartOf="@id/main_details_card"
+        app:layout_constraintTop_toBottomOf="@id/main_details_card" />
+
+
+    <!--    global guides-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline101"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.36" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline102"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.27" />
+
+    <TextView
+        android:id="@+id/tvVerProfile"
+        android:layout_width="wrap_content"
+        android:textColor="@color/heading"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/nunito_semibold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

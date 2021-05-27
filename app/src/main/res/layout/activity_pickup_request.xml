@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2FAFD">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/topbox_ui"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/btnBackActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="@+id/title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/title"
+            app:srcCompat="@drawable/back_ios_icon" />
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/nunito_bold"
+            android:text="Pickup"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:layout_marginBottom="64dp"
+        android:scrollbarThumbVertical="@color/colorPrimary"
+        android:scrollbarSize="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topbar">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+
+            <LinearLayout
+                android:id="@+id/pickup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="Pickup Requested By"
+                    android:textColor="@color/heading"
+                    android:textSize="16dp" />
+
+                <RadioGroup
+                    android:id="@+id/rg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RadioButton
+                        android:id="@+id/consignor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="-5dp"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/colorPrimary"
+                        android:checked="true"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:text="Consignor (Shipper)"
+                        android:textColor="@color/heading"
+                        android:textSize="16dp" />
+
+                    <RadioButton
+                        android:id="@+id/consignee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/colorPrimary"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:text="Consignee"
+                        android:textColor="@color/heading"
+                        android:textSize="16dp" />
+                </RadioGroup>
+
+
+                <TextView
+                    android:id="@+id/location_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="Pickup Location"
+                    android:textColor="#9C9A9A"
+                    android:textSize="13dp" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/pickup_location_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/white">
+
+
+                    <TextView
+                        android:id="@+id/pickup_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:background="@drawable/text_layout_highlighted"
+                        android:drawableRight="@drawable/place_icon"
+                        android:drawableTint="@color/orange"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:gravity="start"
+                        android:padding="8dp"
+                        android:textColor="@color/heading"
+                        android:textSize="16dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--                Adresss-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="Address"
+                    android:textColor="#9C9A9A"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/edit_text_bg"
+                    android:drawableEnd="@drawable/change_icon"
+                    android:drawableTint="@color/skyblue"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:padding="8dp"
+                    android:textColor="@color/heading"
+                    android:textSize="16dp" />
+
+
+                <!--                Contact person Name-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="Contact Person Name"
+                    android:textColor="#9C9A9A"
+                    android:textSize="13dp" />
+
+                <EditText
+                    android:id="@+id/contactPersonName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/edit_text_bg"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:inputType="text"
+                    android:padding="8dp"
+                    android:textColor="@color/heading"
+                    android:textSize="16dp" />
+
+                <!--                contact person No.-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="Contact Person Mobile No."
+                    android:textColor="#9C9A9A"
+                    android:textSize="13dp" />
+
+                <EditText
+                    android:id="@+id/contactPersonNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/edit_text_bg"
+                    android:drawableRight="@drawable/ic_call_black_24dp"
+                    android:drawableTint="@color/green"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:padding="8dp"
+                    android:textColor="@color/heading"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/location_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="Delivery Location"
+                    android:textColor="#9C9A9A"
+                    android:textSize="13dp" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/delivery_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:background="@drawable/text_layout_highlighted"
+                        android:drawableRight="@drawable/place_icon"
+                        android:drawableTint="@color/orange"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:gravity="start"
+                        android:padding="8dp"
+                        android:textColor="@color/heading"
+                        android:textSize="16dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <!--                Adresss-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="Address"
+                    android:textColor="#9C9A9A"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/address2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/edit_text_bg"
+                    android:drawableEnd="@drawable/change_icon"
+                    android:drawableTint="@color/skyblue"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:padding="8dp"
+                    android:textColor="@color/heading"
+                    android:textSize="16dp" />
+
+
+                <!--                Contact person Name-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="Contact Person Name"
+                    android:textColor="#9C9A9A"
+                    android:textSize="13dp" />
+
+                <EditText
+                    android:id="@+id/contactPersonName2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/edit_text_bg"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:inputType="text"
+                    android:padding="8dp"
+                    android:textColor="@color/heading"
+                    android:textSize="16dp" />
+
+                <!--                contact person No.-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="Contact Person Mobile No."
+                    android:textColor="#9C9A9A"
+                    android:textSize="13dp" />
+
+                <EditText
+                    android:id="@+id/contactPersonNo2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/edit_text_bg"
+                    android:drawableRight="@drawable/ic_call_black_24dp"
+                    android:drawableTint="@color/green"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:padding="8dp"
+                    android:textColor="@color/heading"
+                    android:textSize="16dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_shipment_details"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="Pickup Date and Time"
+                    android:textColor="#9C9A9A"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/pickupDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/edit_text_bg"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:padding="8dp"
+                    android:textColor="@color/heading"
+
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="Weight (KG)"
+                    android:textColor="#9C9A9A"
+                    android:textSize="13dp" />
+
+                <EditText
+                    android:id="@+id/weight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/edit_text_bg"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:inputType="number|numberDecimal"
+                    android:padding="8dp"
+                    android:textColor="@color/heading"
+
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="Quantity"
+                    android:textColor="#9C9A9A"
+                    android:textSize="13dp" />
+
+                <EditText
+                    android:id="@+id/noPackages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/edit_text_bg"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:inputType="number"
+                    android:padding="8dp"
+                    android:textColor="@color/heading"
+
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="Load Type"
+                    android:textColor="#9C9A9A"
+                    android:textSize="13dp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/edit_text_bg"
+                    android:paddingStart="8dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp">
+
+                    <Spinner
+                        android:id="@+id/selectLoadSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="-8dp"
+                        android:drawSelectorOnTop="true"
+                        android:dropDownSelector="@drawable/select_icon"
+                        android:entries="@array/load_type"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:theme="@style/spinnerTheme" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="Product"
+                    android:textColor="#9C9A9A"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/pickupProduct2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/text_layout_highlighted"
+                    android:drawableEnd="@drawable/arrow_down"
+                    android:drawableTint="@color/skyblue"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:hint="Select Product"
+                    android:padding="8dp"
+                    android:textColor="@color/heading"
+                    android:textColorHint="@color/heading"
+
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="Said Contains"
+                    android:textColor="#9C9A9A"
+                    android:textSize="13dp" />
+
+                <EditText
+                    android:id="@+id/saidContains"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/edit_text_bg"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:inputType="text"
+                    android:padding="8dp"
+                    android:textColor="@color/heading"
+
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="Invoice Number"
+                    android:textColor="#9C9A9A"
+                    android:textSize="13dp" />
+
+                <EditText
+                    android:id="@+id/invoiceNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/edit_text_bg"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:inputType="text"
+                    android:padding="8dp"
+                    android:textColor="@color/heading"
+
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="Declared Value"
+                    android:textColor="#9C9A9A"
+                    android:textSize="13dp" />
+
+                <EditText
+                    android:id="@+id/Value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/edit_text_bg"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:inputType="numberDecimal"
+                    android:padding="8dp"
+                    android:textColor="@color/heading"
+
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="Special Remark"
+                    android:textColor="#9C9A9A"
+                    android:textSize="13dp" />
+
+                <EditText
+                    android:id="@+id/specialRemark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/edit_text_bg"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:inputType="text"
+                    android:padding="8dp"
+                    android:textColor="@color/heading"
+
+                    android:textSize="16dp" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+    <TextView
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="20dp"
+        android:id="@+id/next_btn_pick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:drawableEnd="@drawable/next_icon"
+        android:drawablePadding="4dp"
+        android:drawableTint="@color/colorPrimary"
+        android:fontFamily="@font/nunito_bold"
+        android:gravity="center"
+        android:text="Next"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20dp" />
+
+
+    <LinearLayout
+        android:id="@+id/shipment_btns_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="20dp"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/back_btn_shipment_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/back_icon"
+            android:drawablePadding="4dp"
+            android:drawableTint="@color/sky"
+            android:fontFamily="@font/nunito_bold"
+            android:gravity="start"
+            android:text="Back"
+            android:textColor="@color/sky"
+            android:textSize="20dp" />
+
+
+        <TextView
+            android:id="@+id/next_btn_shipment_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_weight="1"
+            android:drawableEnd="@drawable/next_icon"
+            android:drawablePadding="4dp"
+            android:drawableTint="@color/colorPrimary"
+            android:fontFamily="@font/nunito_bold"
+            android:gravity="end"
+            android:text="Submit"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20dp" />
+
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

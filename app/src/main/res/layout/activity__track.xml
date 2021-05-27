@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.Activity_Track">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/topbox_ui"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="@+id/textView2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView2"
+            app:srcCompat="@drawable/back_ios_icon" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/nunito_bold"
+            android:text="Tracking"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ProgressBar
+        android:id="@+id/pbTrack"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:indeterminateTint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@android:color/transparent"
+        android:scrollbarSize="3dp"
+        android:scrollbarThumbVertical="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topbar"
+        tools:layout_editor_absoluteX="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent">
+
+            <EditText
+                android:id="@+id/etDocketTrack"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input_layout"
+                android:clickable="true"
+                android:drawableEnd="@drawable/search_icon"
+                android:drawableTint="#999999"
+                android:ems="11"
+                android:fontFamily="@font/nunito_semibold"
+                android:hint="Enter Docket / Ref No."
+                android:inputType="textPhonetic"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="#000"
+                android:textColorHint="#999999"
+                android:textCursorDrawable="@color/heading"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/CardViewTrack"
+                app:layout_constraintStart_toStartOf="@+id/CardViewTrack"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/CardViewTrack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:layout_marginBottom="20dp"
+                android:elevation="8dp"
+                android:visibility="invisible"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etDocketTrack">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white">
+
+                    <LinearLayout
+                        android:id="@+id/details_linear_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/sky"
+                            android:orientation="horizontal"
+                            android:padding="8dp"
+                            android:paddingLeft="4dp"
+                            android:paddingEnd="4dp">
+
+                            <TextView
+                                android:id="@+id/tvTrackNo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@color/sky"
+                                android:fontFamily="@font/nunito_bold"
+                                android:gravity="left"
+                                android:paddingLeft="4dp"
+                                android:paddingTop="2dp"
+                                android:paddingBottom="2dp"
+                                android:textColor="@color/white"
+                                android:textSize="16dp" />
+
+                            <TextView
+                                android:id="@+id/tvTrackDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@color/sky"
+                                android:fontFamily="@font/nunito_bold"
+                                android:gravity="right"
+                                android:paddingTop="2dp"
+                                android:paddingRight="4dp"
+                                android:paddingBottom="2dp"
+                                android:textColor="@color/white"
+                                android:textSize="15dp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:background="@color/white"
+                            android:orientation="horizontal"
+                            android:padding="2dp">
+
+                            <TextView
+                                android:id="@+id/tvTrackSenderName"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@color/white"
+                                android:fontFamily="@font/nunito_semibold"
+                                android:gravity="left"
+                                android:paddingLeft="4dp"
+                                android:paddingTop="2dp"
+                                android:paddingRight="2dp"
+                                android:paddingBottom="2dp"
+                                android:text="Sender : "
+                                android:textColor="@color/heading"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:orientation="horizontal"
+                            android:padding="2dp">
+
+                            <TextView
+                                android:id="@+id/tvTrackReceiverName"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@color/white"
+                                android:fontFamily="@font/nunito_semibold"
+                                android:gravity="left"
+                                android:paddingLeft="4dp"
+                                android:paddingTop="2dp"
+                                android:paddingRight="2dp"
+                                android:paddingBottom="2dp"
+                                android:text="Receiver : "
+                                android:textColor="@color/heading"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:orientation="horizontal"
+                            android:padding="2dp">
+
+                            <TextView
+                                android:id="@+id/tvTrackFrom"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@color/white"
+                                android:fontFamily="@font/nunito_semibold"
+                                android:gravity="left"
+                                android:paddingLeft="4dp"
+                                android:paddingTop="2dp"
+                                android:paddingRight="4dp"
+                                android:paddingBottom="2dp"
+                                android:text="From : "
+                                android:textColor="@color/heading"
+                                android:textSize="13dp" />
+
+
+                            <TextView
+                                android:id="@+id/tvTrackTo"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@color/white"
+                                android:fontFamily="@font/nunito_semibold"
+                                android:gravity="left"
+                                android:paddingLeft="4dp"
+                                android:paddingTop="2dp"
+                                android:paddingRight="2dp"
+                                android:paddingBottom="2dp"
+                                android:text="To : "
+                                android:textColor="@color/heading"
+                                android:textSize="13dp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:orientation="horizontal"
+                            android:padding="2dp">
+
+                            <TextView
+                                android:id="@+id/tvTrackPackages"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@color/white"
+                                android:fontFamily="@font/nunito_semibold"
+                                android:gravity="left"
+                                android:paddingLeft="4dp"
+                                android:paddingTop="2dp"
+                                android:paddingRight="2dp"
+                                android:paddingBottom="2dp"
+                                android:text="Packages : "
+                                android:textColor="@color/heading"
+                                android:textSize="13dp" />
+
+                            <TextView
+                                android:id="@+id/tvTrackWeight"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@color/white"
+                                android:fontFamily="@font/nunito_semibold"
+                                android:gravity="left"
+                                android:paddingLeft="4dp"
+                                android:paddingTop="2dp"
+                                android:paddingRight="2dp"
+                                android:paddingBottom="2dp"
+                                android:text="Weight : "
+                                android:textColor="@color/heading"
+                                android:textSize="13dp" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:orientation="horizontal"
+                            android:padding="2dp">
+
+                            <TextView
+                                android:id="@+id/tvTrackSaidcontain"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@color/white"
+                                android:fontFamily="@font/nunito_semibold"
+                                android:gravity="left"
+                                android:paddingLeft="4dp"
+                                android:paddingTop="2dp"
+                                android:paddingRight="2dp"
+                                android:paddingBottom="2dp"
+                                android:text="Said Contains : "
+                                android:textColor="@color/heading"
+                                android:textSize="13dp" />
+
+                            <TextView
+                                android:id="@+id/tvTrackValue"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@color/white"
+                                android:fontFamily="@font/nunito_semibold"
+                                android:gravity="left"
+                                android:paddingLeft="4dp"
+                                android:paddingTop="2dp"
+                                android:paddingRight="2dp"
+                                android:paddingBottom="2dp"
+                                android:text="Declared Value : "
+                                android:textColor="@color/heading"
+                                android:textSize="13dp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvTrackLastStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#E8F8FF"
+                            android:fontFamily="@font/nunito_semibold"
+                            android:paddingLeft="4dp"
+                            android:paddingTop="10dp"
+                            android:paddingEnd="4dp"
+                            android:paddingBottom="10dp"
+                            android:text="Delivery Status : "
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/details_linear_layout" />
+
+
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvTrackCurrentLoc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFE9E2"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:paddingLeft="4dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="4dp"
+                        android:paddingBottom="10dp"
+                        android:text="Current Location : "
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/details_linear_layout" />
+
+
+                    <Button
+                        android:id="@+id/liveTrackBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/green_stroke_btn"
+                        android:elevation="0dp"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/nunito_bold"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:text="Live Track"
+                        android:textColor="@color/green"
+                        android:textSize="12dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvTrackCurrentLoc" />
+
+                    <Button
+                        android:id="@+id/viewPodBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/green_stroke_btn"
+                        android:elevation="0dp"
+                        android:fontFamily="@font/nunito_bold"
+                        android:paddingStart="10dp"
+                        android:layout_marginRight="10dp"
+                        android:paddingEnd="10dp"
+                        android:text="View POD"
+                        android:textColor="@color/green"
+                        android:textSize="12dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvTrackCurrentLoc" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvTrack"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:nestedScrollingEnabled="false"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="4dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/liveTrackBtn" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

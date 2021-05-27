@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+    <item
+        android:id="@+id/nav_dashboard"
+        android:checkable="true"
+        android:icon="@drawable/dashboard_icon"
+        android:title="Dashboard" />
+
+    <item
+        android:id="@+id/nav_orders"
+        android:checkable="true"
+        android:icon="@drawable/orders"
+        android:title="Orders" />
+
+    <item
+        android:id="@+id/nav_finance"
+        android:checkable="true"
+        android:icon="@drawable/money_bag"
+        android:title="Finance" />
+
+    <item android:title="Account">
+
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/nav_profile"
+                    android:icon="@drawable/user_icon"
+                    android:title="Profile" />
+                <item
+                android:id="@+id/nav_switch_customer"
+                android:icon="@drawable/switch_customer"
+                android:title="Switch Customer" />
+
+                <item
+                    android:id="@+id/nav_logout"
+                    android:checkable="false"
+                    android:icon="@drawable/logout_icon"
+                    android:title="Logout" />
+
+            </group>
+        </menu>
+    </item>
+
+</menu>

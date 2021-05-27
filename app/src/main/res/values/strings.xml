@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Connect Me</string>
+
+    <string-array name="load_type">
+        <item>Select Load Type</item>
+        <item>f-FTL/S-Sundry</item>
+        <item>F/S</item>
+    </string-array>
+
+    <string name="access_code">Access Code</string>
+    <string name="pay_button">Pay</string>
+    <string name="merchant_id">Merchant Id</string>
+    <string name="currency">Currency</string>
+    <string name="amount">Amount</string>
+    <string name="redirect_url">Redirect Url</string>
+    <string name="cancel_url">Cancel Url</string>
+    <string name="rsa_url">RSA Key Url</string>
+</resources>

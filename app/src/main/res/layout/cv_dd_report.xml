@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:background="@drawable/master_card_bg"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_marginEnd="12dp"
+    android:elevation="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginTop="8dp"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:cardCornerRadius="8dp"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <TextView
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="12dp"
+                android:fontFamily="@font/nunito_semibold"
+                android:textColor="@color/heading"
+                android:textSize="15dp"
+                android:id="@+id/tvDate_DD_report"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Requested Del. Date : " />
+
+            <TableLayout
+                android:id="@+id/dd_report_tbl"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:stretchColumns="*"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TableRow
+                    android:visibility="visible"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@drawable/table_header_bg"
+                    android:id="@+id/tableRow1"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:divider="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/prowductID"
+                        android:textSize="15dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Docket No"
+                        android:fontFamily="@font/nunito_bold"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <TextView
+                        android:id="@+id/productID"
+                        android:layout_width="0dp"
+                        android:textSize="15dp"
+                        android:layout_height="wrap_content"
+                        android:text="Quantity"
+                        android:fontFamily="@font/nunito_bold"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <TextView
+                        android:id="@+id/productID1"
+                        android:textSize="15dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Weight"
+                        android:fontFamily="@font/nunito_bold"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                </TableRow>
+
+
+
+
+            </TableLayout>
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

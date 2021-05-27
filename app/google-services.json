@@ -1,0 +1,93 @@
+{
+  "project_info": {
+    "project_number": "607146400433",
+    "firebase_url": "https://inlandlogistics-9c6f8.firebaseio.com",
+    "project_id": "inlandlogistics-9c6f8",
+    "storage_bucket": "inlandlogistics-9c6f8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:607146400433:android:d9796357916741c289e090",
+        "android_client_info": {
+          "package_name": "artos.cms.inland_logistics"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "607146400433-5eh6odd3kgea3t5ilafh3nck59sbf4f8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "artos.cms.inland_logistics",
+            "certificate_hash": "3c197f2ff0fa5f63ff5d93a961ba0ec465f7bc17"
+          }
+        },
+        {
+          "client_id": "607146400433-6uv170bp5r4lbioilgt0641g5rbqjl4d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "artos.cms.inland_logistics",
+            "certificate_hash": "ad94a3e641f3c5e55d6547682497fb55bd004df4"
+          }
+        },
+        {
+          "client_id": "607146400433-0h634k9jv2r53v3nfc0ht83j7rsk04s8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyxqb3zq7l4w9TaTdv83-6gSEP95f5DnQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "607146400433-0h634k9jv2r53v3nfc0ht83j7rsk04s8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:607146400433:android:6546b60cb0d8ec3d89e090",
+        "android_client_info": {
+          "package_name": "com.iwlpl.connectme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "607146400433-938rrv06hvrn6is36sv0qs2b7fl1ml46.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iwlpl.connectme",
+            "certificate_hash": "3c197f2ff0fa5f63ff5d93a961ba0ec465f7bc17"
+          }
+        },
+        {
+          "client_id": "607146400433-0h634k9jv2r53v3nfc0ht83j7rsk04s8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyxqb3zq7l4w9TaTdv83-6gSEP95f5DnQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "607146400433-0h634k9jv2r53v3nfc0ht83j7rsk04s8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

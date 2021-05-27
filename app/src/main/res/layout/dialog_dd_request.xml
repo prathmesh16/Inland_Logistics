@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="26dp"
+    android:background="@drawable/card_ui">
+
+
+    <TextView
+        android:id="@+id/dialog_heading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back_btn_bg2"
+        android:fontFamily="@font/nunito_bold"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:text="Door delivery request"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:drawableRight="@drawable/calender_icon"
+        android:drawableTint="@color/heading"
+        android:fontFamily="@font/nunito_semibold"
+        android:hint="Select Delivery Date"
+        android:textColor="@color/heading"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_heading" />
+
+    <TextView
+        android:id="@+id/rvHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="#E8F8FF"
+        android:fontFamily="@font/nunito_bold"
+        android:gravity="center"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:text="Selected Dockets"
+        android:textColor="@color/heading"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView3" />
+
+
+    <TableLayout
+        android:id="@+id/main_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:stretchColumns="*"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvHeading">
+
+
+        <TableRow
+            android:visibility="visible"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/table_header_bg"
+            android:id="@+id/tableRow1"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:divider="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/prowductID"
+                android:textSize="15dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Docket No"
+                android:fontFamily="@font/nunito_bold"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/productID"
+                android:layout_width="0dp"
+                android:textSize="15dp"
+                android:layout_height="wrap_content"
+                android:text="Quantity"
+                android:fontFamily="@font/nunito_bold"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/productID1"
+                android:textSize="15dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Weight"
+                android:fontFamily="@font/nunito_bold"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <EditText
+        android:id="@+id/tvremark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#cdcdcd"
+        android:ems="10"
+        android:fontFamily="@font/nunito_semibold"
+        android:hint="Enter Remark.."
+        android:inputType="text"
+        android:paddingLeft="6dp"
+        android:paddingTop="10dp"
+        android:paddingRight="6dp"
+        android:paddingBottom="16dp"
+        android:textColor="@color/heading"
+        android:textColorHint="#999999"
+        android:textSize="16dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/buttonDDRequest"
+        app:layout_constraintTop_toBottomOf="@+id/main_table" />
+
+
+    <LinearLayout
+        android:id="@+id/buttonDDRequest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:background="@drawable/back_btn_bg3"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvremark">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/nunito_semibold"
+            android:gravity="center"
+            android:text="Submit"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

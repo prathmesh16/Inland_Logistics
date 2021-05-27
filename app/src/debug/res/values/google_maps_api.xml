@@ -1,0 +1,23 @@
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps APIConstants key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=AD:94:A3:E6:41:F3:C5:E5:5D:65:47:68:24:97:FB:55:BD:00:4D:F4%3Bartos.cms.inland_logistics
+
+    You can also add your credentials to an existing key, using these values:
+
+    Package name:
+    com.cms.connectme
+
+    SHA-1 certificate fingerprint:
+    AD:94:A3:E6:41:F3:C5:E5:5D:65:47:68:24:97:FB:55:BD:00:4D:F4
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+</resources>

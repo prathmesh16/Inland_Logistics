@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    tools:openDrawer="start">
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:background="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        android:theme="@style/navigationTheme"
+        app:headerLayout="@layout/nav_header_navigation"
+        app:menu="@menu/activity_navigation_drawer" >
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="#E3EEF3"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvVersion"
+            android:fontFamily="@font/nunito_semibold"
+            android:textColor="@color/heading"
+            android:text="Version-1.0.8"
+            android:layout_marginStart="16dp"
+            android:textSize="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+    </RelativeLayout>
+
+    </com.google.android.material.navigation.NavigationView>
+
+    <include
+        layout="@layout/dashboard_ui"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"/>
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

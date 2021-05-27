@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvMasterCardMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true">
+
+
+    <ImageView
+        android:id="@+id/completed_icon"
+        android:layout_width="21dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="12dp"
+        android:visibility="invisible"
+        android:src="@drawable/check_circle_icon"
+        android:tint="@color/green"
+        app:layout_constraintBottom_toBottomOf="@id/cvTrackStatus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/cvTrackStatus" />
+
+    <TextView
+        android:id="@+id/dot"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:background="@drawable/dot1"
+        app:layout_constraintBottom_toBottomOf="@id/completed_icon"
+        app:layout_constraintStart_toStartOf="@id/completed_icon"
+        app:layout_constraintTop_toTopOf="@id/completed_icon"
+        app:layout_constraintEnd_toEndOf="@id/completed_icon"/>
+
+
+    <TextView
+        android:elevation="-2dp"
+        android:id="@+id/line1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/completed_icon"
+        app:layout_constraintEnd_toEndOf="@id/completed_icon"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="@id/completed_icon"
+        android:layout_width="0.8dp"
+        android:layout_height="0dp"
+        android:background="#D2E3CB"
+        />
+
+    <TextView
+        android:elevation="-2dp"
+        android:id="@+id/line2"
+        app:layout_constraintTop_toTopOf="@id/completed_icon"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@id/completed_icon"
+        app:layout_constraintEnd_toEndOf="@id/completed_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0.8dp"
+        android:layout_height="0dp"
+        android:background="#D2E3CB"
+        />
+
+
+    <TextView
+        android:id="@+id/cvTrackStatus"
+        android:layout_width="0dp"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Status"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/completed_icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cvTrackOrigin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/heading"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/nunito_semibold"
+        android:text="Origin"
+        android:textSize="13dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/cvTrackStatus"
+        app:layout_constraintTop_toBottomOf="@+id/cvTrackStatus" />
+
+    <TextView
+        android:id="@+id/cvTrackDate"
+        android:layout_width="0dp"
+        android:textColor="@color/heading"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/nunito_semibold"
+        android:text="date"
+        android:textSize="13dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/cvTrackStatus"
+        app:layout_constraintTop_toBottomOf="@+id/cvTrackOrigin" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
